@@ -1,0 +1,39 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0.4rem 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.icon {
+  flex-shrink: 0;
+  display: block;
+}
+
+.label {
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .label {
+    display: none;
+  }
+  .toggle {
+    padding: 0.4rem;
+  }
+}

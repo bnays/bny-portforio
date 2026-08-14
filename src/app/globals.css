@@ -1,0 +1,103 @@
+:root {
+  --paper: #f5f4ef;
+  --paper-dim: #ebe9e1;
+  --surface: #ffffff;
+  --ink: #171b21;
+  --ink-soft: #4a5058;
+  --ink-faint: #8b9098;
+  --accent: #1f6f64;
+  --accent-soft: #dce8e5;
+  --gold: #c9a227;
+  --line: #d8d5cb;
+
+  /* Splash loader keeps a fixed look in both modes */
+  --loader-bg: #171b21;
+  --loader-text: #f5f4ef;
+  --loader-text-dim: #ebe9e1;
+
+  --font-display: "Fraunces", serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --rail-w: 280px;
+  --edge: 1px solid var(--line);
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --paper: #14171c;
+  --paper-dim: #1b1f25;
+  --surface: #1a1e24;
+  --ink: #eef0f2;
+  --ink-soft: #b7bcc4;
+  --ink-faint: #7a828c;
+  --accent: #4fd1b8;
+  --accent-soft: #203834;
+  --gold: #e6c257;
+  --line: #2b3038;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+body.cursor-none,
+body.cursor-none a,
+body.cursor-none button {
+  cursor: none;
+}
+
+[data-hero-in],
+[data-reveal] {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-hero-in],
+  [data-reveal] {
+    opacity: 1;
+  }
+}

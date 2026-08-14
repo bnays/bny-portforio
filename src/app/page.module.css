@@ -1,0 +1,398 @@
+.shell {
+  display: flex;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+}
+
+.section {
+  padding: 5rem 4rem;
+  max-width: 980px;
+  border-bottom: var(--edge);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 3rem 1.25rem;
+  }
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding-top: 6rem;
+  padding-bottom: 5.5rem;
+  max-width: 100%;
+}
+
+.status {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 2rem;
+}
+
+.status::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 5vw, 4.1rem);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 0 0 1.6rem;
+  max-width: 16ch;
+}
+
+.heroTitle em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.heroLede {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 56ch;
+  margin: 0 0 2.2rem;
+}
+
+.heroStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.32rem 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--ink-soft);
+}
+
+/* ---------- Section heading ---------- */
+
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--accent);
+  margin: 0 0 0.6rem;
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0 0 1rem;
+}
+
+.sectionLede {
+  color: var(--ink-soft);
+  max-width: 60ch;
+  margin: 0 0 2.8rem;
+  line-height: 1.6;
+}
+
+/* ---------- Work ---------- */
+
+.cases {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.case {
+  border: var(--edge);
+  background: var(--surface);
+}
+
+.caseMedia {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-bottom: var(--edge);
+  background: var(--paper-dim);
+}
+
+.caseMedia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.4s ease;
+}
+
+.case:hover .caseMedia img {
+  transform: scale(1.015);
+}
+
+.caseBody {
+  padding: 1.8rem 2rem 2.2rem;
+}
+
+.caseHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.caseTitle {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.caseRole {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+.caseDesc {
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin: 0 0 1.1rem;
+  max-width: 62ch;
+}
+
+.caseFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.caseStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.caseLink {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-decoration: none;
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 1px;
+  white-space: nowrap;
+}
+
+.caseLink:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+/* compact variant (no media) */
+.caseCompact .caseBody {
+  padding: 1.8rem 2rem;
+}
+
+/* ---------- Research ---------- */
+
+.researchGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+@media (max-width: 700px) {
+  .researchGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.researchItem {
+  border-left: 2px solid var(--accent-soft);
+  padding-left: 1.2rem;
+}
+
+.researchLabel {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  margin: 0 0 0.5rem;
+}
+
+.researchTitle {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+}
+
+.researchDesc {
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------- About ---------- */
+
+.aboutText {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  max-width: 62ch;
+}
+
+.aboutText p {
+  margin: 0 0 1.2rem;
+}
+
+.aboutText strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ---------- Contact ---------- */
+
+.contact {
+  padding-bottom: 6rem;
+}
+
+.contactRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contactLinks a {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 2px;
+  width: fit-content;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.contactLinks a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.copy {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+}
+
+/* ---------- Experience ---------- */
+
+.expList {
+  display: flex;
+  flex-direction: column;
+}
+
+.expItem {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-top: var(--edge);
+}
+
+.expItem:last-child {
+  padding-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .expItem {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+}
+
+.expMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.expDates {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+.expCompany {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+
+.expBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.expRole {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.expPoints {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.expPoints li {
+  padding-left: 0.2rem;
+}
+
+.expStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.2rem;
+}
