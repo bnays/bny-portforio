@@ -47,14 +47,14 @@ export default function Home() {
           <div className={styles.cases}>
             {/* Case 1: getstarted.eventlogic.se */}
             <article className={styles.case} data-reveal>
-              <div className={styles.caseMedia}>
+              {/* <div className={styles.caseMedia}>
                 <Image
                   src="/images/eventlogic-find-suppliers.webp"
                   alt="Find Suppliers screen from getstarted.eventlogic.se, showing a filterable venue list synced with an interactive map"
                   fill
                   sizes="(max-width: 900px) 100vw, 700px"
                 />
-              </div>
+              </div> */}
               <div className={styles.caseBody}>
                 <div className={styles.caseHead}>
                   <h3 className={styles.caseTitle}>Event Logic — booking flow</h3>
@@ -89,12 +89,12 @@ export default function Home() {
             {/* Case 2: app.eventlogic.se */}
             <article className={styles.case} data-reveal>
               <div className={styles.caseMedia}>
-                <Image
+                {/* <Image
                   src="/images/eventlogic-home.webp"
                   alt="Find venues and hotels landing screen from Event Logic's app, with a day conference search panel"
                   fill
                   sizes="(max-width: 900px) 100vw, 700px"
-                />
+                /> */}
               </div>
               <div className={styles.caseBody}>
                 <div className={styles.caseHead}>
